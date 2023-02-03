@@ -91,7 +91,7 @@ pipeline  {
         stage('Export env variables for RDS and Redis') {
             steps {
                 dir('terraform') {
-                    withAWS(credentials: 'aws_credentials_terraform_user') {
+                    withAWS(credentials: 'aws_credentials') {
                         script {
                             sh "export AWS_DEFAULT_OUTPUT=text"
                             POSTGRES_DB = returnEnvForRDS("POSTGRES_DB")
@@ -113,7 +113,7 @@ pipeline  {
         stage('Deploy project through helm') {
             steps {
                 dir('helm') {
-                    withAWS(credentials: 'aws_credentials_terraform_user') {
+                    withAWS(credentials: 'aws_credentials') {
                         script {
                             sh (
                                 script: """helm install demo-chart ./demo \
