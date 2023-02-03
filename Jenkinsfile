@@ -116,7 +116,7 @@ pipeline  {
                     withAWS(credentials: 'aws_credentials') {
                         script {
                             sh (
-                                script: """helm install demo-chart ./demo \
+                                script: """helm install misago ./misago \
                                 --set POSTGRES_USER=$POSTGRES_USER --set POSTGRES_DB=$POSTGRES_DB \
                                 --set POSTGRES_HOST=$POSTGRES_HOST --set POSTGRES_PASSWORD=$POSTGRES_PASSWORD \
                                 --set REDIS_HOST=$REDIS_HOST
