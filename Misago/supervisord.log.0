@@ -1,0 +1,7 @@
+time="2023-01-27T20:11:54Z" level=info msg="create process:misago"
+time="2023-01-27T20:11:54Z" level=info msg="create process:celery"
+time="2023-01-27T20:11:54Z" level=info msg="stop listening"
+time="2023-01-27T20:11:54Z" level=info msg="try to start program" program=misago
+time="2023-01-27T20:11:54Z" level=info msg="try to start program" program=celery
+time="2023-01-27T20:11:55Z" level=info msg="success to start program" program=misago
+time="2023-01-27T20:11:55Z" level=info msg="success to start program" program=celery
