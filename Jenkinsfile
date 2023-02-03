@@ -73,7 +73,7 @@ pipeline  {
         stage('Terraform Apply') {
             steps {
                 dir('terraform') {
-                    withAWS(credentials: 'aws_credentials', region: 'us-east-2') {
+                    withAWS(credentials: 'aws_credentials') {
                         sh "terraform apply -input=false  -auto-approve"
                     }
                 }
