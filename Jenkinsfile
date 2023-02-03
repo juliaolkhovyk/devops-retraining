@@ -98,7 +98,7 @@ pipeline  {
                             POSTGRES_HOST = returnEnvForRDS("POSTGRES_HOST")
                             POSTGRES_USERE = returnEnvForRDS("POSTGRES_USER")
                             POSTGRES_PASSWORD = returnEnvForRDS("POSTGRES_PASSWORD")
-                            REGIS_HOST = returnEnvForRDS("REDIS_HOST")
+                            REDIS_HOST = returnEnvForRDS("REDIS_HOST")
                             sh "echo ${POSTGRES_PASSWORD}"
                             sh "echo ${POSTGRES_HOST}"
                             sh "echo ${POSTGRES_USER}"
